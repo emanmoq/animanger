@@ -467,7 +467,85 @@
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/owl.carousel.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <div class="modal fade" id="ProfileModal" tabindex="-1" role="dialog" aria-hidden="true">
 
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close closeAddAnimal" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="profileModelHeader">
+              <div class="container">
+                <div class="row ">
+                  <div class="col-md-12"><a href="#" class="btn loginBtn editBtn" data-toggle="modal"
+                      data-target="#EditProfileModal"> edit <i class="fas fa-edit"></i></a>
+                  </div>
+                </div>
+    
+              </div>
+            </div>
+            <div class="profileModalImg">
+              <img src="assets/images/Oval.png" alt="">
+            </div>
+            <h4 class="profileModalName">Jushawn McDowell</h4>
+            <p class="profileEmail">estelle_daugherty@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="EditProfileModal" tabindex="-1" role="dialog" aria-hidden="true">
+    
+        <div class="modal-dialog " role="document">
+          <div class="modal-content ">
+            <button type="button" class="close closeAddAnimal" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+    
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8 text-center">
+                  <form action="">
+    
+                    <h4>Edit Profile</h4>
+                    <label class="uploadPhotoImg">
+                      <div class="overlay"></div>
+                      <input type='file' id="imgInp" class="changePhoto" />
+                      <i class="fas fa-camera"></i>
+                      <img src="assets/images/Oval.png" alt="" id="blah">
+                    </label>
+                    <script>
+    
+                      function readURL(input) {
+                        if (input.files && input.files[0]) {
+                          var reader = new FileReader();
+    
+                          reader.onload = function (e) {
+                            $('#blah').attr('src', e.target.result);
+                          }
+    
+                          reader.readAsDataURL(input.files[0]); // convert to base64 string
+                        }
+                      }
+    
+                      $("#imgInp").change(function () {
+                        readURL(this);
+                      });
+                    </script>
+                    <div class="form-group">
+                      <input type="text" class="form-control" value="Jushawn McDowell">
+                    </div>
+                    <div class="form-group">
+                      <input type="email" class="form-control" value="estelle_daugherty@gmail.com">
+                    </div>
+                    <button type="submit" class="btn loginBtn SaveBtn"> Save</button>
+    
+                  </form>
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 </body>
 
 </html>
