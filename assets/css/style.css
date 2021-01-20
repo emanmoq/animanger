@@ -901,9 +901,39 @@ margin-top:20px;
   margin-top:20px;
   width:100%;
 }
-#ProfileModal .modal-dialog {
+#ProfileModal .modal-dialog,#loginModal .modal-dialog, #EditProfileModal .modal-dialog {
+
   max-width: 94%;
 }
+#EditProfileModal .SaveBtn{
+  width:100%;
+}
+.profileModalName {
+  font-size: 2.225em;}
+  .profileEmail {
+    font-size: 1.2875em;}
+    button.close.closeAddAnimal {
+     
+      left: -7px;
+      top: -10px;}
+      .sendBtn{
+        width:100%;
+      }
+      .AddAnimal {
+        right: auto;
+        left: 37%;}
+        #AddAnimalModal .modal-dialog .modal-content {
+          padding:15px;
+      }
+  form .loginBtn.SaveBtn{
+    width:100%;
+  }
+  .modalTitle h4{
+    text-align: center;
+  }
+  .addAnimalForm h6 {
+    font-size: 35px;
+  }
 }
 @media(min-width:767px)and (max-width:1023px){
   body{
@@ -983,7 +1013,8 @@ margin-top:20px;
   top: 106% !important;
   left: 6px !important;
 }
-#ProfileModal .modal-dialog {
+
+#ProfileModal .modal-dialog,#loginModal .modal-dialog, #EditProfileModal .modal-dialog {
   max-width: 94%;
 }
   }
@@ -1004,5 +1035,11 @@ margin-top:20px;
     .Profile{
       padding:20px;
     }
- 
+    #ProfileModal .modal-dialog,#loginModal .modal-dialog, #EditProfileModal .modal-dialog{
+      max-width:94%;
+    }
+ .animalInformation .col-lg-6.col-md-12{
+  flex: 0 0 100%;
+  max-width: 100%;
+ }
   }
