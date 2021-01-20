@@ -506,7 +506,7 @@ font-size:1.25em;
 }
 .Profile{
   float:right;
-  padding:25px;
+  padding:24px;
 }
 .navbar {
   float: left;
@@ -643,8 +643,8 @@ button.close.closeAddAnimal{
   width:60px;
   height:60px;
   background-color: #F8D03F;
-  left:-30px;
-  top:-30px;
+  left: -20px;
+  top: -17px;
   border-radius: 50%;
   opacity:1;
 
@@ -896,8 +896,16 @@ margin-top:20px;
 .loginBtn{
   float: none;
 }
+.Profile{
+  padding:5px 20px;
+  margin-top:20px;
+  width:100%;
 }
-@media(min-width:767px)and (max-width:1024px){
+#ProfileModal .modal-dialog {
+  max-width: 94%;
+}
+}
+@media(min-width:767px)and (max-width:1023px){
   body{
     font-size:15px;
   }
@@ -909,13 +917,12 @@ margin-top:20px;
       width:100%;
     }
     .MobileLogin{
-      display: none;
+      display: block;
       float: none;
   
     }
     .descktopLogin{
-      display:block;
-      width:200px;
+      display:none;
     }
     .navbar-expand-lg .navbar-nav .nav-link:before{
       display: none;
@@ -970,4 +977,32 @@ margin-top:20px;
     flex: 0 0 100%;
     max-width: 100%;
 }
+
+.profile .dropdown-menu {
+  width: 100%;
+  top: 106% !important;
+  left: 6px !important;
+}
+#ProfileModal .modal-dialog {
+  max-width: 94%;
+}
+  }
+  @media (min-width:1024px) and (max-width:1366px){
+    .MobileLogin{
+      display: none;
+      float: none;
+  
+    }
+    .descktopLogin{
+      display:block;}
+    .MobileLogin.descktopLogin{
+      width:200px;
+    }
+    .profileHeader .navbar-expand-lg .navbar-nav .nav-item {
+      padding: 16px 11px;
+    }
+    .Profile{
+      padding:20px;
+    }
+ 
   }

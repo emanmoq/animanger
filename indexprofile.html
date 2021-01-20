@@ -20,7 +20,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="profileHeader">
     <div class="container">
       <div class="row">
         <div class="col-md-12 clearfix">
@@ -127,12 +127,24 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#contactUs">Contact</a>
                 </li>
-
+                <div class="Profile  MobileLogin clearfix dropdown">
+                  <div class="profileDetails dropdown-toggle" data-toggle="dropdown" id="dropdownProfile" aria-haspopup="true"
+                    aria-expanded="false">
+                    <div class="profileImg "><img src="assets/images/profile.png" alt=""></div>
+                    <p>Jushawn McDowell</p>
+                  </div>
+                  <div class="dropdown-menu" aria-labelledby="dropdownProfile">
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ProfileModal"> <i
+                        class="far fa-user"></i> My Profile <i class="lni lni-chevron-right"></i></a>
+                    <a class="dropdown-item" href="#"> <i class="fas fa-sign-out-alt"></i> Logout <i
+                        class="lni lni-chevron-right"></i></a>
+                  </div>
+                </div>
               </ul>
 
             </div>
           </nav>
-          <div class="Profile clearfix dropdown">
+          <div class="Profile  descktopLogin clearfix dropdown">
 
             <div class="profileDetails dropdown-toggle" data-toggle="dropdown" id="dropdownProfile" aria-haspopup="true"
               aria-expanded="false">
