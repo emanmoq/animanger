@@ -187,6 +187,9 @@ border :1px solid #F8D03F;
 transition:  all .2s;
 height:42px;
 }
+header{
+  height:90px
+}
 header .loginBtn{
   align-self: center;
   margin-left:auto;
