@@ -67,13 +67,14 @@
                       <a class="dropdownContent clearfix" href="#">
                         <div class="dropdownImg"><img src="assets/images/sheep.png" alt=""> </div>
                         <p>Sheep</p>
-                      </a>
+                      </a>        
                       <div class="dropdown-menu innerDropDown" aria-labelledby="SheepDropdown">
                         <a href="" class="dropdown-item">Sheep1</a>
                         <a href="" class="dropdown-item">Sheep2</a>
                       </div>
                     </li>
-                    <li class="dropdown-item dropdown-toggle " id="cowDropDown" role="button" data-toggle="dropdown">
+                    <li class="dropdown-item dropdown-toggle dropdown-submenu " id="cowDropDown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                       <a class="dropdownContent clearfix" href="#">
                         <div class="dropdownImg"><img src="assets/images/sheep.png" alt=""> </div>
                         <p>Cow</p>
@@ -83,7 +84,8 @@
                         <a href="" class="dropdown-item">Dairy</a>
                       </div>
                     </li>
-                    <li class="dropdown-item dropdown-toggle " id="donkeyDropdown" role="button" data-toggle="dropdown">
+                    <li class="dropdown-item dropdown-toggle dropdown-submenu" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <a class="dropdownContent clearfix" href="#">
                         <div class="dropdownImg"><img src="assets/images/donkey.png" alt=""> </div>
                         <p>Donkey</p>
@@ -94,7 +96,8 @@
                       </div>
                     </li>
 
-                    <li class="dropdown-item dropdown-toggle " id="PigDropdown" role="button" data-toggle="dropdown">
+                    <li class="dropdown-item dropdown-toggle  dropdown-submenu" id="PigDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <a class="dropdownContent clearfix" href="#">
                         <div class="dropdownImg"><img src="assets/images/pig.png" alt=""> </div>
                         <p>Pig</p>
@@ -105,7 +108,8 @@
                       </div>
                     </li>
 
-                    <li class="dropdown-item dropdown-toggle " id="LamaDropdown" role="button" data-toggle="dropdown">
+                    <li class="dropdown-item dropdown-toggle dropdown-submenu" id="LamaDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <a class="dropdownContent clearfix" href="#">
                         <div class="dropdownImg"><img src="assets/images/lama.png" alt=""> </div>
                         <p>Lama</p>
@@ -114,6 +118,7 @@
                         <a href="" class="dropdown-item">Lama1</a>
                         <a href="" class="dropdown-item">Lama2</a>
                       </div>
+
                     </li>
 
                   </ul>
@@ -128,8 +133,8 @@
                   <a class="nav-link" href="#contactUs">Contact</a>
                 </li>
                 <div class="Profile  MobileLogin clearfix dropdown">
-                  <div class="profileDetails dropdown-toggle" data-toggle="dropdown" id="dropdownProfile" aria-haspopup="true"
-                    aria-expanded="false">
+                  <div class="profileDetails dropdown-toggle" data-toggle="dropdown" id="dropdownProfile"
+                    aria-haspopup="true" aria-expanded="false">
                     <div class="profileImg "><img src="assets/images/profile.png" alt=""></div>
                     <p>Jushawn McDowell</p>
                   </div>
@@ -456,44 +461,44 @@
 
         <div class="container">
           <div class="row justify-content-center">
-         <div class="col-lg-6 col-md-8 text-center">
-          <form action="">
+            <div class="col-lg-6 col-md-8 text-center">
+              <form action="">
 
-            <h4>Edit Profile</h4>
-            <label class="uploadPhotoImg">
-              <div class="overlay"></div>
-              <input type='file' id="imgInp" class="changePhoto" />
-              <i class="fas fa-camera"></i>
-              <img src="assets/images/Oval.png" alt="" id="blah">
-            </label>
-            <script>
+                <h4>Edit Profile</h4>
+                <label class="uploadPhotoImg">
+                  <div class="overlay"></div>
+                  <input type='file' id="imgInp" class="changePhoto" />
+                  <i class="fas fa-camera"></i>
+                  <img src="assets/images/Oval.png" alt="" id="blah">
+                </label>
+                <script>
 
-              function readURL(input) {
-                if (input.files && input.files[0]) {
-                  var reader = new FileReader();
+                  function readURL(input) {
+                    if (input.files && input.files[0]) {
+                      var reader = new FileReader();
 
-                  reader.onload = function (e) {
-                    $('#blah').attr('src', e.target.result);
+                      reader.onload = function (e) {
+                        $('#blah').attr('src', e.target.result);
+                      }
+
+                      reader.readAsDataURL(input.files[0]); // convert to base64 string
+                    }
                   }
 
-                  reader.readAsDataURL(input.files[0]); // convert to base64 string
-                }
-              }
+                  $("#imgInp").change(function () {
+                    readURL(this);
+                  });
+                </script>
+                <div class="form-group">
+                  <input type="text" class="form-control" value="Jushawn McDowell">
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" value="estelle_daugherty@gmail.com">
+                </div>
+                <button type="submit" class="btn loginBtn SaveBtn"> Save</button>
 
-              $("#imgInp").change(function () {
-                readURL(this);
-              });
-            </script>
-            <div class="form-group">
-              <input type="text" class="form-control" value="Jushawn McDowell">
+              </form>
             </div>
-            <div class="form-group">
-              <input type="email" class="form-control" value="estelle_daugherty@gmail.com">
-            </div>
-            <button type="submit" class="btn loginBtn SaveBtn"> Save</button>
-
-          </form>
-         </div>
 
           </div>
         </div>

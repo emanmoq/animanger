@@ -77,10 +77,9 @@ jQuery(function ($) {
     
       return false;
     });
-    $('.dropdown-submenu a').on("click", function(e){
-      $(this).next('ul').toggle();
-      e.stopPropagation();
-      e.preventDefault();
+    $('.dropdown-submenu').on("click", function(e){
+      $('.innerDropDown').removeClass("show");
+      $(this).find('.innerDropDown').addClass("show");
     });
     $(".modal .editBtn").click(function(){
       $(this).parents().modal('hide')
