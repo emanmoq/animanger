@@ -4,7 +4,7 @@ jQuery(function ($) {
       
         scrollTop = $(window).scrollTop();
 
-        if (scrollTop >($('.headerImg').height()+ 200)) {
+        if (scrollTop >($('header').height())) {
             $('header').addClass('scrollNav');
         }
 
@@ -77,6 +77,13 @@ jQuery(function ($) {
     
       return false;
     });
-    
+    $('.dropdown-submenu a').on("click", function(e){
+      $(this).next('ul').toggle();
+      e.stopPropagation();
+      e.preventDefault();
+    });
+    $(".modal .editBtn").click(function(){
+      $(this).parents().modal('hide')
+    })
 });
 
