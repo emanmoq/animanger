@@ -77,9 +77,8 @@ jQuery(function ($) {
     
       return false;
     });
-    $('.dropdown-submenu').on("click", function(e){
-      $('.innerDropDown').removeClass("show");
-      $(this).find('.innerDropDown').addClass("show");
+    $('.dropdown-submenu').click( function(){
+      $(this).find('.innerDropDown').toggle();
     });
     $(".modal .editBtn").click(function(){
       $(this).parents().modal('hide')
