@@ -259,6 +259,8 @@ header .loginBtn{
   padding-top:39px;
   padding-bottom: 120px;
   background-repeat: no-repeat;
+  background-color: #000080;
+
 }
 .aboutText p{
   font-size:1.875em;
@@ -382,6 +384,7 @@ height:69px;
 }
 .modal{
   z-index: 999999999999999999999;
+  overflow-y: scroll;
 }
 #loginModal .modal-dialog ,#EditProfileModal .modal-dialog{
   max-width: 1165px;
@@ -597,11 +600,12 @@ margin-right:0;
   background-color: white;
   border:1px solid #707070;
   height:68px;
+  padding-left:60px;
 }
 .searchForm-control::placeholder{
   color:#959595;
   font-size: 18px;
-  padding-left:60px;
+ 
 }
 .searchForm i{
 position: absolute;
@@ -714,7 +718,8 @@ top:22%;
 }
 .editBtn{
   font-size: 1.5em;
-  float:right
+  float:right;
+  line-height: 30px;
 }
 .EditForm .form-control{
   background-color: white;
@@ -842,7 +847,22 @@ text-align: left;
   left: 43%;
   font-size: 41px;
 }
+
 @media(min-width:300px)and (max-width:767px){
+  .profile .dropdown-menu {
+  position: absolute;
+    top: 47px !important;
+    left: -1px !important;
+}
+.profileModelHeader{
+  height:255px;
+}
+  .dropdown-menu{
+    width:100%;
+  }
+  .subheroEdit{
+    height:120px;
+  }
 body{
   font-size:14px;
 }
@@ -874,13 +894,17 @@ body{
   padding-top: 30px;
   padding-bottom: 30px;}
   .heroLogin {
-    width: 350px;
+    width: 100%;
     font-size: 1.825em;
     height: 82px;}
 .aboutUs {
-    background-size: cover;
-    padding-top: 20px;
+  background-size: inherit;
+  padding-top: 40px;
+  background-color: #000080;
     padding-bottom: 50px;}
+   .aboutus .sectionTitle {
+      margin-bottom: 75px;
+  }
 .newsImg{
   margin-top:30px;
 }
@@ -923,6 +947,7 @@ margin-top:20px;
 }
 #EditProfileModal .SaveBtn{
   width:100%;
+  margin-top:10px;
 }
 .profileModalName {
   font-size: 2.225em;}
@@ -950,10 +975,20 @@ margin-top:20px;
   .addAnimalForm h6 {
     font-size: 35px;
   }
+  button.close.closeAddAnimal{
+    left:-5px;
+  }
 }
 @media(min-width:767px)and (max-width:1023px){
   body{
     font-size:15px;
+  }
+  .footerSocial li {
+    display: inline-block;
+    margin-right: 20px;
+}
+  button.close.closeAddAnimal{
+    left:-5px;
   }
   .scrollNav{
     height:auto;
@@ -995,11 +1030,6 @@ margin-top:20px;
     width: 100%;
     margin-right: 0;
   }
-
-  .footerLogo{
-  float:none;
-  margin-top:20px;
-  }
   .loginForm{
     width:100%;
     border:0;
@@ -1033,6 +1063,11 @@ margin-top:20px;
 #ProfileModal .modal-dialog,#loginModal .modal-dialog, #EditProfileModal .modal-dialog {
   max-width: 94%;
 }
+ .aboutUs .col-md-7 {
+
+  flex: 0 0 100%;
+  max-width: 100%;
+}
   }
   @media (min-width:1024px) and (max-width:1366px){
     .MobileLogin{
@@ -1058,4 +1093,15 @@ margin-top:20px;
   flex: 0 0 100%;
   max-width: 100%;
  }
+ .halfFormGroup{
+   width: 100%;;
+ }
+  }
+  @media(min-width:1600px){
+    .container {
+      max-width: 1334px;
+    }
+    .sectionTitle {
+      margin-bottom: 0;
+    }
   }

@@ -8,7 +8,7 @@
   <title>Animanger </title>
   <!--Css Files and Fonts-->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/css/animate.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link href="assets/css/lightbox.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap"
@@ -24,45 +24,45 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 ">
-      <div class="menuContent clearfix">
-        <nav class="navbar navbar-expand-lg ">
-          <a class="navbar-brand " href="index.html">
-            <div class="logo">
-              <img src="assets/images/lOGO.png" alt="">
-            </div>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <i></i>
-            <i></i>
-            <i></i>
-          </button>
-          <div class="collapse navbar-collapse  clearfix" id="navbarNav">
-            <ul class="navbar-nav float-left">
-              <li class="nav-item">
-                <a class="nav-link home active" href="index.html">Home </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#aboutus">About us</a>
-              </li>
+          <div class="menuContent clearfix">
+            <nav class="navbar navbar-expand-lg ">
+              <a class="navbar-brand " href="index.html">
+                <div class="logo">
+                  <img src="assets/images/lOGO.png" alt="">
+                </div>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i></i>
+                <i></i>
+                <i></i>
+              </button>
+              <div class="collapse navbar-collapse  clearfix" id="navbarNav">
+                <ul class="navbar-nav float-left">
+                  <li class="nav-item">
+                    <a class="nav-link home active" href="index.html">Home </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link about" href="#aboutus">About us</a>
+                  </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="#news">News</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contactUs">Contact</a>
-              </li>
-              <a href="#" class="btn loginBtn MobileLogin" data-toggle="modal" data-target="#loginModal"> <i
-                  class="far fa-user"></i> login / Register</a>
+                  <li class="nav-item">
+                    <a class="nav-link news" href="#news">News</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contactUs">ContactS</a>
+                  </li>
+                  <a href="#" class="btn loginBtn MobileLogin" data-toggle="modal" data-target="#loginModal"> <i
+                      class="far fa-user"></i> login / Register</a>
 
 
-            </ul>
+                </ul>
 
+              </div>
+            </nav>
+            <a href="#" class="btn loginBtn descktopLogin" data-toggle="modal" data-target="#loginModal"> <i
+                class="far fa-user"></i> login / Register</a>
           </div>
-        </nav>
-        <a href="#" class="btn loginBtn descktopLogin" data-toggle="modal" data-target="#loginModal"> <i
-            class="far fa-user"></i> login / Register</a>
-      </div>
         </div>
       </div>
     </div>
@@ -86,7 +86,7 @@
       </div>
     </div>
   </section>
-  <section class="news">
+  <section class="news" id="news">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -127,7 +127,7 @@
       </div>
     </div>
   </section>
-  <section class="aboutUs">
+  <section class="aboutUs" id="aboutus">
     <div class="container">
       <div class="row">
         <div class="col-lg-5 col-md-12">
@@ -159,7 +159,7 @@
       </div>
     </div>
   </section>
-  <section class="ContactUs">
+  <section class="ContactUs" id="contactUs">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -253,9 +253,8 @@
   </footer>
 
   <!-- login Modal -->
-  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" 
-    aria-hidden="true">
-  
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modalLogo">
@@ -265,12 +264,12 @@
 
           <div class="modalTitle">
             <h4> Login / Register</h4>
-           
+
           </div>
           <div class="modal-body clearfix">
             <div class="loginForm firstForm">
               <p>Enter your email and password</p>
-              
+
               <form action="" class="loginF">
                 <div class="form-group">
                   <input type="text" class="form-control" placeholder="Email">
@@ -289,7 +288,7 @@
                 </li>
                 <li class="google">
                   <a href="#">
-                  <i class="fab fa-google"></i></a>
+                    <i class="fab fa-google"></i></a>
                 </li>
               </ul>
             </div>
@@ -308,7 +307,7 @@
                 <div class="form-group">
                   <input type="password" class="form-control" placeholder="Confirm Password">
                 </div>
-          
+
                 <button class="btn loginBtn sendBtn" type="submit">Sign up</button>
 
               </form>

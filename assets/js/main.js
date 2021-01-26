@@ -27,37 +27,13 @@ jQuery(function ($) {
     });
     $(".up").on("click", function () { $("html, body").animate({ scrollTop: 0 }, "slow"); return false; });
 
-          $('.OurSpeakersCar').owlCarousel({
-            autoplay: true,
-            loop: true,
-            margin: 15,
-            nav:true,
-            responsive: {
-              0: {
-                items:1,
-                nav:true,
-
-              },
-              600:{
-                items:2,
-
-                nav:true,
-              },
-              1000:{
-                items:4,
-                  nav:true,
-              }
-         
-            }
-          });
-
       function onScroll(event){
         var scrollPosition = $(document).scrollTop();
       $('.nav-link[href^="#"').each(function () {
         console.log($(this).attr('href')); 
         var refElement = $($(this).attr("href"));
       //   console.log($(this).attr("href")); //log
-        if (refElement.length&&refElement.position().top-100 <= scrollPosition) {
+        if (refElement.length&&refElement.position().top -150 < scrollPosition) {
         $('.nav-link').removeClass("active");
         $(this).addClass("active");
         }
@@ -65,25 +41,48 @@ jQuery(function ($) {
           $('.nav-link').removeClass("active");
           $('.nav-link.home').addClass("active");
         }
+        else if($(document).scrollTop() > $("#news").height() &&  $(document).scrollTop() >= $("#aboutus").top -100  ){
+          $('.nav-link.news').removeClass("active");
+        }
         else{
         $(this).removeClass("active"); 
       
         }
       });
     }
+ 
     $(document).on("scroll", onScroll);
     $('.navbar-collapse .nav-link').on('click', function () {
-      $('html, body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
-    
+      $('.nav-link').removeClass("active");
+      $(this).addClass("active");
+      $('html, body').animate({ scrollTop: $(this.hash).offset().top -150 }, 1000);
       return false;
     });
+
     $('.dropdown-submenu').click( function(){
       $('.innerDropDown').hide()
       $(this).find('.innerDropDown').show();
-      return false;
     });
     $(".modal .editBtn").click(function(){
       $(this).parents().modal('hide')
     })
+    var arabicPattern = /[\u0600-\u06FF]/;
+
+$('.searchForm-control').bind('input propertychange', function(ev) {
+
+    var text = ev.target.value;
+
+    if (arabicPattern.test(text)) {
+        // arabic;
+        $('.searchForm-control').css('direction', 'rtl')
+
+    }
+    else{
+      $('.searchForm-control').css('direction', 'ltr')
+    }
+
+
+});
+  
 });
 
