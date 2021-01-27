@@ -41,11 +41,18 @@ jQuery(function ($) {
           $('.nav-link').removeClass("active");
           $('.nav-link.home').addClass("active");
         }
-        else if( $("#aboutus").position().top -150  > scrollPosition){
+    
+        else if( $("#news").position().top -50  > scrollPosition && scrollPosition < $("#aboutus").position().top - 50 ){
+          $('.nav-link').removeClass("active");
+          $('.nav-link.news').addClass("active");
+
+        }
+        else if( $("#aboutus").position().top -50  > scrollPosition && scrollPosition < $("#contactUs").position().top -50 ){
           $('.nav-link').removeClass("active");
           $('.nav-link.about').addClass("active");
 
         }
+      
         else{
         $(".nav-link").removeClass("active"); 
         }
@@ -54,7 +61,7 @@ jQuery(function ($) {
  
     $(document).on("scroll", onScroll);
     $('.navbar-collapse .nav-link').on('click', function () {
-      $('html, body').animate({ scrollTop: $(this.hash).offset().top -150 }, 1000);
+      $('html, body').animate({ scrollTop: $(this.hash).offset().top -100 }, 1000);
       $(".nav-link").removeClass("active"); 
       $(this).addClass("active");
     });
@@ -66,8 +73,6 @@ jQuery(function ($) {
     $(".modal .editBtn").click(function(){
       $(this).parents().modal('hide')
     });
-
-
     var arabicPattern = /[\u0600-\u06FF]/;
 
 $('.searchForm-control').bind('input propertychange', function(ev) {
