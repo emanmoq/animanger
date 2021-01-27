@@ -58,14 +58,16 @@ jQuery(function ($) {
       $(".nav-link").removeClass("active"); 
       $(this).addClass("active");
     });
-
     $('.dropdown-submenu').click( function(){
       $('.innerDropDown').hide()
       $(this).find('.innerDropDown').toggle();
+      return false
     });
     $(".modal .editBtn").click(function(){
       $(this).parents().modal('hide')
-    })
+    });
+
+
     var arabicPattern = /[\u0600-\u06FF]/;
 
 $('.searchForm-control').bind('input propertychange', function(ev) {
@@ -80,9 +82,6 @@ $('.searchForm-control').bind('input propertychange', function(ev) {
     else{
       $('.searchForm-control').css('direction', 'ltr')
     }
-
-
 });
-  
 });
 
