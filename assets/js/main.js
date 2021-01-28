@@ -42,7 +42,7 @@ jQuery(function ($) {
           $('.nav-link.home').addClass("active");
         }
     
-        else if( $("#news").position().top -50  > scrollPosition && scrollPosition < $("#aboutus").position().top - 50 ){
+        else if( $("#news").position().top -50  > scrollPosition && scrollPosition < $("#news").height() ){
           $('.nav-link').removeClass("active");
           $('.nav-link.news').addClass("active");
 
@@ -58,6 +58,7 @@ jQuery(function ($) {
         }
       });
     }
+
  
     $(document).on("scroll", onScroll);
     $('.navbar-collapse .nav-link').on('click', function () {
@@ -70,6 +71,13 @@ jQuery(function ($) {
       $(this).find('.innerDropDown').toggle();
       return false
     });
+    $(".dropdown ").click(function(){
+      if($(".innerDropDown").show()){
+        $(".innerDropDown").hide()
+      }
+      
+    })
+   
     $(".modal .editBtn").click(function(){
       $(this).parents().modal('hide')
     });
